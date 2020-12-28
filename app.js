@@ -1,4 +1,4 @@
-i
+
 /* shopping cart */
 
 //show cart when clicked
