@@ -20,7 +20,6 @@ let cart = [];
 //buttons
 let buttonsDOM = [];
 
-
 // Responsible for getting the products
 class Products {
   async getProjects(){
@@ -150,6 +149,11 @@ class UI {
   }
   cartLogic(){
     clearCartBtn.addEventListener("click",() => this.clearCart());
+    // cart functionality
+
+    cartContent.addEventListener("click", event => {
+      console.log(event);
+    });
   }
   clearCart(){
     let cartItems = cart.map(item => item.id);
@@ -202,11 +206,6 @@ document.addEventListener("DOMContentLoaded", ()=> {
    }).then(()=> {
     ui.getBagButtons();
     ui.cartLogic()
-
-
-
-
-
    });
 });
 
